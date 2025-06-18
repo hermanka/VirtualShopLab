@@ -4,5 +4,6 @@ services:
   virtualshoplab:
     container_name: virtualshoplab
     image: hermanka/virtualshop
+    restart: always
     ports:
-      - "8008:80"
+      - "80:80"
