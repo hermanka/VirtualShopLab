@@ -6,7 +6,7 @@ VirtualShop is a website that contains known vulnerabilities. Based on [Adam Dou
 
 Build
 
-  docker build -t hermanka/virtualshop
+	docker build -t hermanka/virtualshop
 
 Simply run the following, which will map your local port `8080` to the
 port `80` in the container. Change the `8080` to another port if you
@@ -14,9 +14,9 @@ like:
 
 	docker run -p 127.0.0.1:8080:80 -it hermanka/virtualshop
 
-Or use Docker Compose
+Or simply use Docker Compose
 
-  docker compose up -d
+	docker compose up -d
 
 Once the docker image is downloaded and running, you should be able to
 access virtualshop on your browser:
