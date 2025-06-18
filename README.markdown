@@ -20,7 +20,7 @@ Or simply use Docker Compose
 
 Once the docker image is downloaded and running, you should be able to
 access virtualshop on your browser:
-[http://localhost:8080](http://localhost:8080).
+[http://localhost:8008](http://localhost:8008).
 
 Note that Windows users might need some additional steps to do the
 port forwarding correctly. Google is your friend, use it well. 
