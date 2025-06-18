@@ -14,6 +14,10 @@ like:
 
 	docker run -p 127.0.0.1:8080:80 -it hermanka/virtualshop
 
+Or use Docker Compose
+
+  docker compose up -d
+
 Once the docker image is downloaded and running, you should be able to
 access virtualshop on your browser:
 [http://localhost:8080](http://localhost:8080).
