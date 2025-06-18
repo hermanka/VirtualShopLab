@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  virtualshoplab:
+    container_name: virtualshoplab
+    image: hermanka/virtualshop
+    ports:
+      - "8008:80"
