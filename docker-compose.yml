@@ -3,7 +3,7 @@ services:
     # build: .
     container_name: virtualshoplab
     image: porchn/php5.6-apache
-    # restart: always
+    restart: always
     volumes:
       - ./website:/var/www/html
     ports:
@@ -16,6 +16,7 @@ services:
   vsl-db:
       image: mysql:5.7
       container_name: vsl-db
+      restart: always
       environment:
         MYSQL_DATABASE: virtualshop
         MYSQL_ROOT_PASSWORD: dees
