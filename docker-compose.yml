@@ -1,9 +1,27 @@
-version: '3.8'
-
 services:
   virtualshoplab:
+    # build: .
     container_name: virtualshoplab
-    image: hermanka/virtualshop
-    restart: always
+    image: porchn/php5.6-apache
+    # restart: always
+    volumes:
+      - ./website:/var/www/html
     ports:
-      - "80:80"
+      - "8080:80"
+    links:
+      - vsl-db
+    networks:
+      - default
+  
+  vsl-db:
+      image: mysql:5.7
+      container_name: vsl-db
+      environment:
+        MYSQL_DATABASE: virtualshop
+        MYSQL_ROOT_PASSWORD: dees
+        MYSQL_USER: seed
+        MYSQL_PASSWORD: dees
+      volumes:
+        - ./current.sql:/docker-entrypoint-initdb.d/current.sql
+      networks:
+        - default
